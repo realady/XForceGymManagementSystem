@@ -150,7 +150,6 @@ while True:
                         member_catagory="PLATINUM"
                     cursor.execute(f"SELECT {member_catagory} FROM FEES")
                     member_amount=cursor.fetchall()
-                    print(member_amount)
                     member_amount=member_amount[0][0]
                     cursor.execute("SELECT * FROM SNO")
                     for i in cursor:
@@ -185,7 +184,7 @@ while True:
                     print(f"TRAINER WITH TRAINER ID : {ch} REMOVED")
                     con.commit()
                 elif ch==4:
-                    ch=input("DO YOU WANT TO SHOW THE TRAINERS (Y, N) : ")
+                    ch=input("DO YOU WANT TO SHOW THE MEMBERS (Y, N) : ")
                     if ch.upper()=="Y":
                         cursor.execute("SELECT * FROM MEMBER")
                         members=cursor.fetchall()
